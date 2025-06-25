@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directory Access Table</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            blue: '#2563eb',
+            darkbg: '#0f172a',
+            lightbg: '#ffffff',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-lightbg dark:bg-darkbg text-black dark:text-white min-h-screen flex flex-col">
+  <div class="w-full flex flex-col items-center mt-6 mb-2">
+    <span class="text-2xl sm:text-3xl font-extrabold text-blue tracking-wide">FV-Productions</span>
+  </div>
+  <!-- Header Section -->
+  <header class="w-full border-b border-blue bg-white dark:bg-darkbg sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between py-4 px-4 gap-4">
+      <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+        <span class="text-2xl"><i class="fa-solid fa-folder-open"></i></span>
+        <span class="text-xl font-bold tracking-wide">Directory Access</span>
+      </div>
+      <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+        <span id="theme-toggle" class="cursor-pointer p-2 rounded-full bg-blue hover:bg-blue/80 transition text-white text-xl flex items-center justify-center" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </span>
+        <div class="relative w-full max-w-xs">
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-blue dark:text-blue text-lg pointer-events-none">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input id="search" type="text" placeholder="Search by name..." class="w-full pl-10 pr-4 py-2 rounded border border-blue bg-white dark:bg-darkbg text-blue dark:text-blue focus:outline-none focus:ring-2 focus:ring-blue"/>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Table Section -->
+  <main class="flex-1 w-full flex flex-col items-center px-2">
+    <div class="w-full max-w-3xl mt-8">
+      <div class="overflow-x-auto rounded-2xl shadow-lg border-2 border-blue bg-white dark:bg-darkbg">
+        <table class="min-w-full text-black dark:text-white">
+          <thead>
+            <tr class="bg-white dark:bg-darkbg text-blue border-b-2 border-blue">
+              <th class="py-4 px-4 text-center rounded-tl-2xl">No</th>
+              <th class="py-4 px-4 text-center">Name</th>
+              <th class="py-4 px-4 text-center rounded-tr-2xl">Links</th>
+            </tr>
+          </thead>
+          <tbody id="directory-table">
+            <!-- Table rows injected by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <footer class="w-full text-center py-4 mt-10 text-sm text-blue-400">
+    © FV-Productions 2025
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
