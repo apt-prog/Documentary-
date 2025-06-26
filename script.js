@@ -12,6 +12,24 @@ const directory = [
     linkedin: "https://www.linkedin.com/in/fenil-vegad-746016322/",
     github: "https://github.com/apt-prog",
   },
+  {
+    name:"Text Counter App",
+    website:"https://text-counter-app.vercel.app/",
+    linkedin: "https://www.linkedin.com/in/fenil-vegad-746016322/",
+    github: "https://github.com/apt-prog",
+  },
+  {
+    name:"Palindrom Checker",
+    website:"https://palindrom-checker-app.vercel.app/",
+    linkedin: "https://www.linkedin.com/in/fenil-vegad-746016322/",
+    github: "https://github.com/apt-prog",
+  },
+  {
+    name:"Odd Even Cheker",
+    website:"https://odd-even-cheker-app.vercel.app/",
+    linkedin: "https://www.linkedin.com/in/fenil-vegad-746016322/",
+    github: "https://github.com/apt-prog",
+  },
 ];
 
 const tableBody = document.getElementById("directory-table");
