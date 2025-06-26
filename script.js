@@ -6,6 +6,12 @@ const directory = [
     linkedin: "https://www.linkedin.com/in/fenil-vegad-746016322/",
     github: "https://github.com/apt-prog",
   },
+  {
+    name:"To-Do List App",
+    website:"https://to-do-list-app-black-tau.vercel.app/",
+    linkedin: "https://www.linkedin.com/in/fenil-vegad-746016322/",
+    github: "https://github.com/apt-prog",
+  },
 ];
 
 const tableBody = document.getElementById("directory-table");
