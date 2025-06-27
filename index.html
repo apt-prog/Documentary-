@@ -13,59 +13,63 @@
       theme: {
         extend: {
           colors: {
-            blue: '#2563eb',
-            darkbg: '#0f172a',
-            lightbg: '#ffffff',
+            royal: '#4169e1',
           },
         },
       },
     }
   </script>
 </head>
-<body class="bg-lightbg dark:bg-darkbg text-black dark:text-white min-h-screen flex flex-col">
+<body class="bg-white dark:bg-black text-black dark:text-white min-h-screen flex flex-col transition-colors duration-700">
   <div class="w-full flex flex-col items-center mt-6 mb-2">
-    <span class="text-2xl sm:text-3xl font-extrabold text-blue tracking-wide">FV-Productions</span>
+    <span class="text-2xl sm:text-3xl font-extrabold text-royal tracking-wide">FV-Productions</span>
   </div>
   <!-- Header Section -->
-  <header class="w-full border-b border-blue bg-white dark:bg-darkbg sticky top-0 z-10">
+  <header class="w-full border-b border-black dark:border-white bg-white dark:bg-black sticky top-0 z-10 transition-colors duration-700">
     <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between py-4 px-4 gap-4">
       <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
-        <span class="text-2xl"><i class="fa-solid fa-folder-open"></i></span>
+        <span class="text-2xl text-royal"><i class="fa-solid fa-folder-open"></i></span>
         <span class="text-xl font-bold tracking-wide">Directory Access</span>
       </div>
       <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
-        <span id="theme-toggle" class="cursor-pointer p-2 rounded-full bg-blue hover:bg-blue/80 transition text-white text-xl flex items-center justify-center" title="Toggle theme">
+        <span id="theme-toggle" class="cursor-pointer p-2 rounded-full bg-royal hover:bg-royal/80 transition text-white text-xl flex items-center justify-center" title="Toggle theme">
           <i class="fa-solid fa-moon"></i>
         </span>
-        <div class="relative w-full max-w-xs">
-          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-blue dark:text-blue text-lg pointer-events-none">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </span>
-          <input id="search" type="text" placeholder="Search by name..." class="w-full pl-10 pr-4 py-2 rounded border border-blue bg-white dark:bg-darkbg text-blue dark:text-blue focus:outline-none focus:ring-2 focus:ring-blue"/>
+        <div class="flex w-full max-w-xs gap-2">
+          <select id="language-select" class="block w-32 rounded border border-black dark:border-white bg-white dark:bg-black text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-royal transition-colors duration-700">
+            <option value="">All Languages</option>
+            <!-- Options will be injected by JS -->
+          </select>
+          <div class="relative flex-1">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-royal text-lg pointer-events-none">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input id="search" type="text" placeholder="Search by name..." class="w-full pl-10 pr-4 py-2 rounded border border-black dark:border-white bg-white dark:bg-black text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-royal transition-colors duration-700"/>
+          </div>
         </div>
       </div>
     </div>
   </header>
   <!-- Table Section -->
-  <main class="flex-1 w-full flex flex-col items-center px-2">
+  <main class="flex-1 w-full flex flex-col items-center px-2 transition-colors duration-700">
     <div class="w-full max-w-3xl mt-8">
-      <div class="overflow-x-auto rounded-2xl shadow-lg border-2 border-blue bg-white dark:bg-darkbg">
-        <table class="min-w-full text-black dark:text-white">
+      <div class="overflow-x-auto rounded-3xl shadow-2xl border-2 border-black dark:border-white bg-white dark:bg-black p-2 transition-colors duration-700">
+        <table class="min-w-full text-black dark:text-white bg-white dark:bg-black rounded-2xl transition-colors duration-700">
           <thead>
-            <tr class="bg-white dark:bg-darkbg text-blue border-b-2 border-blue">
+            <tr class="bg-white dark:bg-black text-black dark:text-white border-b-2 border-black dark:border-white rounded-t-2xl transition-colors duration-700">
               <th class="py-4 px-4 text-center rounded-tl-2xl">No</th>
               <th class="py-4 px-4 text-center">Name</th>
               <th class="py-4 px-4 text-center rounded-tr-2xl">Links</th>
             </tr>
           </thead>
-          <tbody id="directory-table">
+          <tbody id="directory-table" class="divide-y divide-black/10 dark:divide-white/10 transition-colors duration-700">
             <!-- Table rows injected by JS -->
           </tbody>
         </table>
       </div>
     </div>
   </main>
-  <footer class="w-full text-center py-4 mt-10 text-sm text-blue-400">
+  <footer class="w-full text-center py-4 mt-10 text-sm text-royal">
     © FV-Productions 2025
   </footer>
   <script src="script.js"></script>
