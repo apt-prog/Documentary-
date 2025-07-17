@@ -42,6 +42,13 @@ const directory = [
     github: "https://github.com/apt-prog",
     tags: ["Single Page" , "Animation" , "React Js"],
   },
+  {
+    name: "Blog Management",
+    website: "https://blogmanagment-fv.onrender.com/",
+    linkedin: "https://www.linkedin.com/in/fenil-vegad-746016322/",
+    github: "https://github.com/apt-prog",
+    tags: ["Express JS" , "EJS" , "Server Side Rendering","MongoDB","Full Stack"],
+  },
 ];
 
 const tableBody = document.getElementById("directory-table");
